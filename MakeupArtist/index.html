@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Makeupbytep - Professional Makeup Artist</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Tambahkan link ke library AOS untuk animasi scroll -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen">
+      <div class="loading-spinner"></div>
+    </div>
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+      <div class="container">
+        <div class="logo">Makeup<span>bytep</span></div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#" class="nav-link active" data-section="home">Home</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link" data-section="about">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link" data-section="portfolio"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="#" class="nav-link" data-section="contact">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container">
+        <div class="hero-content">
+          <img src="images/makeupartist.png" alt="Makeup Artist" />
+          <div class="hero-text">
+            <h1>Makeupbytep.</h1>
+            <p>
+              Hai Cantik! Aku Steffi Odelia, Make Up artist yang percaya setiap
+              wajah punya cerita sendiri. Mau tampil soft glam? Bold look? atau
+              neutraltapi tetap on point? Aku punya rahasianya! Yuk, bikin
+              setiap momentlebih berkilap!!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR SERVICES -->
+    <section class="services" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container">
+        <h2>Our Service</h2>
+        <div class="service-grid">
+          <div
+            class="service-item"
+            data-aos="flip-left"
+            data-aos-duration="800"
+          >
+            <img src="images/regulermakeup.png" alt="Regular Makeup" />
+            <h3>Regular Makeup</h3>
+            <p>Keseharian, Komunitas, Acara Santai, Pesta</p>
+          </div>
+          <div
+            class="service-item"
+            data-aos="flip-left"
+            data-aos-duration="800"
+          >
+            <img src="images/weddingmakeup.png" alt="Wedding Makeup" />
+            <h3>Wedding Makeup</h3>
+            <p>Acara Pernikahan, Resepsi, Undangan</p>
+          </div>
+          <div
+            class="service-item"
+            data-aos="flip-left"
+            data-aos-duration="800"
+          >
+            <img src="images/prewedding.png" alt="Prewedding" />
+            <h3>Prewedding</h3>
+            <p>Shooting up to 5 Outfits (2 Looks) Max 3小时</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT TESTIMONIALS / GALLERY -->
+    <section class="clients" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container">
+        <h2>Client Stories</h2>
+        <div class="client-grid">
+          <div
+            class="client-card"
+            data-aos="zoom-in-up"
+            data-aos-duration="600"
+          >
+            <img src="images/eka.png" alt="@eka" />
+            <h3>@eka</h3>
+            <p>
+              "Mau make up natural, tapi tetap keliatan glowing. Puas banget!"
+            </p>
+          </div>
+          <div
+            class="client-card"
+            data-aos="zoom-in-up"
+            data-aos-duration="600"
+          >
+            <img src="images/angel.png" alt="@Angel" />
+            <h3>@Angel</h3>
+            <p>
+              "Pengantin yang paling cantik di hari pernikahanku, thanks Tep!"
+            </p>
+          </div>
+          <div
+            class="client-card"
+            data-aos="zoom-in-up"
+            data-aos-duration="600"
+          >
+            <img src="images/Sabil.png" alt="@Sabil" />
+            <h3>@Sabil</h3>
+            <p>
+              "Hasil make upnya bikin aku makin percaya diri di acara
+              prewedding."
+            </p>
+          </div>
+          <div
+            class="client-card"
+            data-aos="zoom-in-up"
+            data-aos-duration="600"
+          >
+            <img src="images/rani.jpg" alt="@Rani" />
+            <h3>@Rani</h3>
+            <p>
+              "Tidak hanya cantik, tapi juga nyaman dan cocok untuk kulit
+              sensitifku."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALENDAR SECTION -->
+    <section class="calendar" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container">
+        <h2>Check My Calendar</h2>
+        <div class="calendar-container">
+          <div class="month">
+            <div class="month-nav">
+              <button id="prev-month" class="nav-btn">&lt;</button>
+              <h3 id="current-month-year">December 2025</h3>
+              <button id="next-month" class="nav-btn">&gt;</button>
+            </div>
+            <div class="calendar-grid">
+              <div class="day-names">
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
+                <span>Sat</span>
+                <span>Sun</span>
+              </div>
+              <div id="days-grid" class="days-grid">
+                <!-- Dates will be populated by JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT US SECTION (HIDDEN BY DEFAULT) -->
+    <section
+      id="about-us"
+      class="about-us"
+      style="display: none"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <div class="container">
+        <h2>About Us</h2>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="images/serfi.png" alt="Makeup Artist" />
+          </div>
+          <div class="about-text">
+            <h3>Makeupbytep.</h3>
+            <p>
+              Serfi Oktia adalah seorang make up artist berusia 28 tahun yang
+              berdomisili di Cikarang. Makeupbytep berdiri dari tahun 2021
+              sekarang, menawarkan layanan rias untuk berbagai acara seperti
+              wedding, graduation, party, prewedding dan lainnya. Makeupbytep
+              selalu berupaya memberikan hasil makeup terbaik dengan
+              memerhatikan detail, tren kecantikan, serta kenyamanan klien dalam
+              setiap prosesnya
+            </p>
+            <p>
+              Dengan gaya yang natural namun tetap elegan, Serfi siap menjadi
+              mitra penting partner cerita cantikmu. Mari tampil lebih percaya
+              diri dengan makeup profesional!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION (HIDDEN BY DEFAULT) -->
+    <section
+      id="portfolio"
+      class="portfolio"
+      style="display: none"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <div class="container">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+          <!-- Portfolio Item 1 -->
+          <div
+            class="portfolio-item"
+            data-aos="fade-up"
+            data-aos-duration="600"
+          >
+            <img src="images/1.png" alt="Portfolio 1 Top" />
+            <img src="images/2.png" alt="Portfolio 1 Bottom" />
+          </div>
+
+          <!-- Portfolio Item 2 -->
+          <div
+            class="portfolio-item"
+            data-aos="fade-up"
+            data-aos-duration="600"
+          >
+            <img src="images/3.png" alt="Portfolio 2 Top" />
+            <img src="images/4.png" alt="Portfolio 2 Bottom" />
+          </div>
+
+          <!-- Portfolio Item 3 -->
+          <div
+            class="portfolio-item"
+            data-aos="fade-up"
+            data-aos-duration="600"
+          >
+            <img src="images/5.png" alt="Portfolio 3 Top" />
+            <img src="images/6.png" alt="Portfolio 3 Bottom" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT US SECTION (HIDDEN BY DEFAULT) - CHAT TRIGGER -->
+    <section
+      id="contact-us"
+      class="contact-us"
+      style="display: none"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-header">
+          <div class="social-icons">
+            <a href="https://instagram.com/makeupbytep" target="_blank"
+              ><i data-feather="instagram"></i> @makeupbytep</a
+            >
+            <a
+              href="https://www.facebook.com/share/1AFjNdegge/?mibextid=wwXIfr"
+              target="_blank"
+              ><i data-feather="facebook"></i> Makeupbytep</a
+            >
+            <a href="https://wa.me/c/6285156980252" target="_blank"
+              ><i data-feather="phone"></i> +62 851-5698-0252</a
+            >
+          </div>
+          <!-- Tombol Konsultasi untuk Memicu Tawk.to -->
+           
+
+        <!-- Catatan: Widget Tawk.to akan muncul secara otomatis di pojok kanan bawah -->
+        <!-- Bagian chat-room lama dihapus -->
+      </div>
+    </section>
+
+    <!-- PRODUCT RECOMMENDATIONS -->
+    <section class="products" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container">
+        <h2>Different Types Of Makeup Brushes</h2>
+        <div class="product-grid">
+          <div class="product-item" data-aos="fade-up" data-aos-duration="600">
+            <img src="images/brushes set.png" alt="Makeup Brushes" />
+            <h3>Makeup Brushes Set</h3>
+            <p>Complete set for all your makeup needs.</p>
+          </div>
+          <div class="product-item" data-aos="fade-up" data-aos-duration="600">
+            <img src="images/korean skincare.png" alt="Korean Skincare" />
+            <h3>Korean Skincare Routine</h3>
+            <p>Essential steps for glowing skin.</p>
+          </div>
+          <div class="product-item" data-aos="fade-up" data-aos-duration="600">
+            <img src="images/sculpting kit.png" alt="Sculpting Trio" />
+            <h3>Sculpting Trio Kit</h3>
+            <p>Contour, highlight, and blush in one set.</p>
+          </div>
+          <div class="product-item" data-aos="fade-up" data-aos-duration="600">
+            <img src="images/makeup sponges.png" alt="Makeup Sponges" />
+            <h3>Makeup Sponges</h3>
+            <p>Blend foundation seamlessly with these sponges.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer data-aos="fade-up" data-aos-duration="1000">
+      <div class="container">
+        <!-- Tetap gunakan class "social-links" untuk footer -->
+        <div class="social-links">
+          <a href="https://instagram.com/makeupbytep" target="_blank"
+            ><i data-feather="instagram"></i> @makeupbytep</a
+          >
+          <a
+            href="https://www.facebook.com/share/1AFjNdegge/?mibextid=wwXIfr"
+            target="_blank"
+            ><i data-feather="facebook"></i> Makeupbytep</a
+          >
+          <a href="https://wa.me/c/6285156980252" target="_blank"
+            ><i data-feather="phone"></i> +62 851-5698-0252</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="back-to-top" title="Go to top">
+      <i data-feather="arrow-up"></i>
+    </button>
+
+    <!-- SCRIPT -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Script Tawk.to -->
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/69639950edf65119809bee5e/1jemgudqc"; // <-- Spasi di akhir URL dihapus
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+    <script>
+      // Inisialisasi Feather Icons setelah semua elemen dimuat
+      feather.replace();
+
+      // Inisialisasi AOS Animation
+      AOS.init({
+        duration: 800, // Durasi default animasi
+        easing: "ease-in-out", // Jenis easing
+        once: true, // Hanya animasi sekali
+        offset: 100, // Jarak sebelum animasi dimulai
+      });
+
+      // Back to Top Button
+      const backToTopButton = document.getElementById("back-to-top");
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
+        ) {
+          backToTopButton.style.display = "block";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      };
+
+      backToTopButton.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth", // Smooth scroll
+        });
+      });
+
+      // Loading Screen
+      window.addEventListener("load", function () {
+        const loadingScreen = document.getElementById("loading-screen");
+        loadingScreen.style.display = "none"; // Sembunyikan loading screen saat semua dimuat
+      });
+
+      // --- Tambahkan script untuk tombol konsultasi Tawk.to ---
+      document.addEventListener("DOMContentLoaded", function () {
+        const tawkTriggerButton = document.getElementById("tawk-trigger");
+
+        if (tawkTriggerButton) {
+          tawkTriggerButton.addEventListener("click", function (e) {
+            e.preventDefault(); // Mencegah perilaku default jika ada
+            // Memicu tawk.to chat (ini akan membuka widget jika sudah dimuat)
+            if (
+              typeof Tawk_API !== "undefined" &&
+              typeof Tawk_API.toggleVisibility === "function"
+            ) {
+              Tawk_API.toggleVisibility(); // Buka/tutup chat jika sudah dimuat
+            } else if (
+              typeof Tawk_API !== "undefined" &&
+              typeof Tawk_API.maximize === "function"
+            ) {
+              Tawk_API.maximize(); // Buka chat jika minimize
+            } else {
+              // Jika API belum siap, kita hanya bisa mengandalkan klik otomatis
+              // Tawk.to biasanya akan membuka widget saat diinisialisasi jika belum ada
+              console.log(
+                "Tawk.to API tidak ditemukan atau tidak memiliki fungsi toggle/maximize.",
+              );
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
